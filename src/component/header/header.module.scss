@@ -1,0 +1,26 @@
+@import '../../style/mixin/breakpoint.scss';
+
+/*
+** header
+*/
+
+.root {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-lg);
+
+    @include breakpoint('sm') {
+        flex-direction: row;
+    }
+}
+
+.title {
+    margin-bottom: var(--space-sm);
+
+    @include breakpoint('sm') {
+        margin-bottom: 0;
+    }
+}

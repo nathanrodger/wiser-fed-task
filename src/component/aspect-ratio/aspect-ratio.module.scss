@@ -1,0 +1,10 @@
+@import '../../style/mixin/aspect-ratio.scss';
+
+/*
+** aspect-ratio
+*/
+
+.default {
+    @include aspect-ratio(16,9); 
+    background-color: rgba(var(--color-black), 0.5);
+}

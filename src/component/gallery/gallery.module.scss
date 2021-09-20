@@ -1,0 +1,113 @@
+@import '../../style/mixin/breakpoint.scss';
+
+/*
+** gallery
+*/
+
+.root {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    -ms-grid-gap: var(--space-sm);
+    grid-gap: var(--space-sm);
+    margin-top: 0;
+    margin-bottom: var(--space-lg);
+    padding-left: 0;
+    list-style: none;
+
+    @include breakpoint('sm') {
+        -ms-grid-columns: 50% 50%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint('lg') {
+        -ms-grid-columns: 33.33% 33.33% 33.33%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.link:focus {
+    outline: 0.2rem dotted rgba(var(--color-white), 1);
+}
+
+/*
+** IE Grid
+**
+** Would make this into a mixin in future
+*/
+
+.item:nth-of-type(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+
+.item:nth-of-type(2) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+
+    @include breakpoint('sm') {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
+    }
+}
+
+.item:nth-of-type(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+
+    @include breakpoint('sm') {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+    }
+
+     @include breakpoint('lg') {
+        -ms-grid-row: 1;
+        -ms-grid-column: 3;
+    }
+}
+
+.item:nth-of-type(4) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+
+    @include breakpoint('sm') {
+        -ms-grid-row: 2;
+        -ms-grid-column: 2;
+    }
+
+     @include breakpoint('lg') {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+    }
+}
+
+.item:nth-of-type(5) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+
+    @include breakpoint('sm') {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+     @include breakpoint('lg') {
+        -ms-grid-row: 2;
+        -ms-grid-column: 2;
+    }
+}
+
+.item:nth-of-type(6) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+
+    @include breakpoint('sm') {
+        -ms-grid-row: 3;
+        -ms-grid-column: 2;
+    }
+
+    @include breakpoint('lg') {
+        -ms-grid-row: 2;
+        -ms-grid-column: 3;
+    }
+}

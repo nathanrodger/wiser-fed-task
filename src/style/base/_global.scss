@@ -1,0 +1,19 @@
+/*
+** global
+*/
+
+:root {
+    --color-black: 0, 0, 0;
+    --color-white: 225, 225, 225;
+    --space-xs: 0.8rem;
+    --space-sm: 1.6rem;
+    --space-md: 3.2rem;
+    --space-lg: 6.4rem;
+    --space-xl: 9.8rem;
+}
+
+body {
+    background-color: rgba(var(--color-black), 1);
+    margin-right: var(--space-md);
+    margin-left: var(--space-md);
+}
